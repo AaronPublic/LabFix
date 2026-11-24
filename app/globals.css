@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+/* =============================================================
+   LabFix theme: the school colors (blue, yellow, red, white).
+   To match the official school colors, change the hex values
+   below. Every page uses these tokens (bg-brand-700, bg-gold-400,
+   text-crimson-600, ...), so nothing else needs to change.
+   ============================================================= */
+@theme {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* School blue (primary: navbar, buttons, links) */
+  --color-brand-50: #eef4ff;
+  --color-brand-100: #dbe6ff;
+  --color-brand-200: #bfd2ff;
+  --color-brand-300: #93b4fd;
+  --color-brand-400: #5f8cf8;
+  --color-brand-500: #3866f0;
+  --color-brand-600: #2149d6;
+  --color-brand-700: #1b3aad;
+  --color-brand-800: #1a338a;
+  --color-brand-900: #172c6b;
+  --color-brand-950: #0f1c45;
+
+  /* School yellow (accent: highlights, main call-to-action) */
+  --color-gold-50: #fffbea;
+  --color-gold-100: #fff3c4;
+  --color-gold-200: #ffe788;
+  --color-gold-300: #ffd84a;
+  --color-gold-400: #fcc71c;
+  --color-gold-500: #f2b705;
+  --color-gold-600: #d18f00;
+  --color-gold-700: #a76603;
+  --color-gold-800: #864f0b;
+  --color-gold-900: #6e410e;
+
+  /* School red (errors, "needs attention", required marks) */
+  --color-crimson-50: #fff1f2;
+  --color-crimson-100: #ffe0e2;
+  --color-crimson-200: #ffc6ca;
+  --color-crimson-300: #ff9ca3;
+  --color-crimson-400: #fb636e;
+  --color-crimson-500: #f23544;
+  --color-crimson-600: #d91a2a;
+  --color-crimson-700: #b8121f;
+  --color-crimson-800: #98131e;
+  --color-crimson-900: #7e1620;
+
+  /* Page background: white with a hint of blue */
+  --color-canvas: #f5f7fc;
+}
+
+body {
+  @apply bg-canvas text-slate-800 antialiased;
+}
+
+/* Visible keyboard focus everywhere. */
+:focus-visible {
+  @apply outline-2 outline-offset-2 outline-brand-600;
+}
